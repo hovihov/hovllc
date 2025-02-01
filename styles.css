@@ -1,30 +1,57 @@
 /* General Styles */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    line-height: 1.6;
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
-/* Hero Section - Smaller & Centered */
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero Section */
 .hero {
     position: relative;
-    width: 100%;
-    height: 45vh; /* Reduce height */
+    height: 60vh;
     background: url('hero-bg.jpg') center/cover no-repeat;
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-/* Dark Overlay for Readability */
 .hero-overlay {
     position: absolute;
     width: 100%;
@@ -32,131 +59,62 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Hero Content */
 .hero-content {
     position: relative;
-    z-index: 2;
+    color: white;
     max-width: 600px;
-    width: 90%;
-    text-align: center;
-    padding: 15px;
 }
 
-/* Heading & Text */
 .hero h1 {
-    font-size: 2rem; /* Reduce size */
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    line-height: 1.2;
-    color: #fff;
 }
 
 .hero p {
-    font-size: 1rem; /* Reduce size */
-    margin-bottom: 15px;
-    color: #f1f1f1;
+    font-size: 1.2rem;
 }
 
-/* Call-to-Action Button */
 .btn {
     display: inline-block;
     background-color: #ff7b00;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #e66a00;
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-    .hero {
-        height: 40vh; /* Even smaller on mobile */
-    }
-
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        font-size: 0.8rem;
-        padding: 8px 16px;
-    }
-}
-
-
-/* Services Section */
-#services {
-    padding: 80px 20px;
+/* Sections */
+section {
+    padding: 60px 20px;
     text-align: center;
-    background: #1a1a1a;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.services-container {
+/* Cards */
+.solutions-container, .products-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.service-card {
-    width: 280px;
-    background: #222;
+.solution-card, .product-card {
+    background: white;
     padding: 20px;
     margin: 15px;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+    width: 280px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.service-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-}
-
-/* Testimonials */
-#testimonials {
-    padding: 60px 20px;
-    text-align: center;
-    background: #282828;
-}
-
-.testimonial {
-    max-width: 600px;
-    margin: 20px auto;
-    font-size: 1.2rem;
-    font-style: italic;
-    border-left: 5px solid #ff7b00;
-    padding-left: 15px;
-}
-
-/* Contact */
-#contact {
-    padding: 60px 20px;
-    text-align: center;
-    background: #1a1a1a;
-}
-
+/* Footer */
 footer {
     background: #111;
-    padding: 20px;
+    color: white;
     text-align: center;
+    padding: 20px;
 }
