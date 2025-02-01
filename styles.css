@@ -12,11 +12,11 @@ body {
     line-height: 1.6;
 }
 
-/* Hero Section - Smaller & Centered */
+/* Hero Section - Perfectly Centered */
 .hero {
     position: relative;
     width: 100%;
-    height: 45vh; /* Reduce height */
+    height: 45vh; /* Adjusted for better proportion */
     background: url('hero-bg.jpg') center/cover no-repeat;
     display: flex;
     align-items: center; /* Center vertically */
@@ -32,28 +32,34 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Hero Content */
+/* Hero Content - Fully Centered */
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 600px;
     width: 90%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
     padding: 15px;
 }
 
 /* Heading & Text */
 .hero h1 {
-    font-size: 2rem; /* Reduce size */
+    font-size: 2rem;
     margin-bottom: 10px;
     line-height: 1.2;
     color: #fff;
+    text-align: center;
 }
 
 .hero p {
-    font-size: 1rem; /* Reduce size */
+    font-size: 1rem;
     margin-bottom: 15px;
     color: #f1f1f1;
+    text-align: center;
 }
 
 /* Call-to-Action Button */
@@ -75,7 +81,22 @@ body {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .hero {
-        height: 40vh; /* Even smaller on 
+        height: 40vh; /* Reduce height on mobile */
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
 
 
 /* Services Section */
